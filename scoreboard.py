@@ -1,6 +1,6 @@
 from turtle import Turtle
 Alignment = "center"
-Font = ("Arial", 20, "normal")
+Font = ("Courier", 20, "normal")
 
 class ScoreBoard(Turtle):
 
