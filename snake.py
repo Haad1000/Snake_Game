@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-move_Speed = 20
+move_Speed = 15
 UP = 90
 DOWN = 270
 LEFT = 180
