@@ -13,14 +13,18 @@ class Snake:
         self.head = self.parts[0]
 
     def create_Snake(self):
-        x_cord = 0
         for i in range(3):
-            tim = Turtle("square")
-            tim.penup()
-            tim.color("white")
-            tim.setx(x_cord)
-            x_cord -= 20
-            self.parts.append(tim)
+            self.extend_snake()
+
+    def extend_snake(self):
+        tim = Turtle("square")
+        tim.penup()
+        tim.color("white")
+        self.parts.append(tim)
+
+    def bite_eaten(self):
+        self.extend_snake()
+        self.parts[len(self.parts) - 1].goto(self.parts[len(self.parts) - 2].xcor(), self.parts[len(self.parts) - 2].ycor())
 
     def move_Snake(self):
         for i in range(len(self.parts) - 1, 0, -1):
