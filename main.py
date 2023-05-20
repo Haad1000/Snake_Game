@@ -35,7 +35,7 @@ while game_on:
         score_Board.game_over()
         game_on = False
 
-    for parts in snake.parts[1:len(snake.parts)]:
+    for parts in snake.parts[1:]:
         if snake.head.distance(parts) < 10:
             score_Board.game_over()
             game_on = False
